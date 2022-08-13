@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>communities</title>
+{% endblock %}
+{% block body %}
+<div>
+    <form action="{{url_for('predictor')}}" method="post">
+        <label for="">race percentage black</label>
+        <input type="text" name="racepctblack" id="race" placeholder="race % black"><br>
+        <label for="">race percentage white</label>
+        <input type="text" name="racePctWhite" id="race" placeholder="race % white"><br>
+        <label for="">percentage in household investment or rent income</label>
+        <input type="text" name="pctWInvInc" id="" placeholder="% investment/ rent income"><br>
+        <label for="">percentage household with public assistance income</label>
+        <input type="text" name="pctWPubAsst" id="" placeholder="% public assist income"><br>
+        <label for="">percentage of divorced males</label>
+        <input type="text" name="MalePctDivorce" id="" placeholder="% males divorced"><br>
+        <label for="">percentage of divorced females</label>
+        <input type="text" name="FemalePctDiv" id="" placeholder="% females divorced"><br>
+        <label for="">percentage of dirvoced population</label>
+        <input type="text" name="TotalPctDiv" id="" placeholder="% divorced population"><br>
+        <label for="">percentage families with both parents</label>
+        <input type="text" name="PctFam2Par" placeholder="% families with parents"><br>
+        <label for="">percentage kids with both parents</label>
+        <input type="text" name="PctKids2Par" id="" placeholder="% kids with parents"><br>
+        <label for="">percentage kids below 4 with both parents</label>
+        <input type="text" name="PctYoungKids2Par" id="" placeholder="% small kids with parents"><br>
+        <label for="">percentage children between 12 and 17 with both parents</label>
+        <input type="text" name="PctTeen2Par" id="" placeholder="% teens with parents"><br>
+        <label for="">percentage kids born out of wedlock</label>
+        <input type="text" name="PctIlleg" id="" placeholder="% wedlock kids"><br>
+        <label for="">percentage people in owner occupied houses</label>
+        <input type="text" name="PctPersOwnOccup" id="" placeholder="% people own houses"><br>
+        <button class="btn btn-large btn-primary btn-block" type="submit">predict</button>
+    </form>
+</div>
+<br>
+{{predicted}}
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
